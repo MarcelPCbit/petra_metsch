@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-    --color-pri-rgb: 87, 106, 120;
-        /* HEX:  #576A78 */
+    --color-pri-rgb: 21, 107, 84;
+        /* HEX:  #156B54 */
     --color-sec-rgb: 120, 107, 87;
         /* HEX:  #786B57 */
 }       
@@ -12,8 +12,8 @@
 */
 
 @theme {
-    --font-pri: 'Lithograph', serif;
-    --font-sec: 'Roboto', 'Helvetica', 'Arial', 'sans-serif';
+    --font-pri: 'Noto Sans', Roboto, 'Helvetica', 'Arial', 'sans-serif';
+    --font-sec: 'Raleway', 'Helvetica', 'Arial', 'sans-serif';
 
     --color-pri: rgba(var(--color-pri-rgb), 1);
     --color-pri-o-90: rgba(var(--color-pri-rgb), 0.9);
@@ -45,19 +45,19 @@
         Import Fonts
     */
     @font-face {
-        font-family: 'Lithograph';
+        font-family: 'Noto Sans';
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url("../font/lithograph.ttf");
+        src: url("../font/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf");
     }
 
     @font-face {
-        font-family: 'Roboto';
+        font-family: 'Raleway';
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url("../font/Roboto-Regular.ttf");
+        src: url("../font/Raleway/Raleway-VariableFont_wght.ttf");
     }
 
     /*
