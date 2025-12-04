@@ -15,6 +15,23 @@
     --font-pri: 'Noto Sans', Roboto, 'Helvetica', 'Arial', 'sans-serif';
     --font-sec: 'Raleway', 'Helvetica', 'Arial', 'sans-serif';
 
+    --color-key: #1CE8B8;
+    --color-primary: #156B54;
+    
+    --color-on-primary: #FFFFFF;
+    --color-primary-container: #A4F2D5;
+    --color-on-primary-container: #00513E;
+
+    --color-surface-default: #F5FBF6;
+    --color-surface-bright: #F5FBF6;
+    --color-surface-dim: #D5DBD7;
+    --color-surface-container-lowest: #FFFFFF;
+    --color-surface-container-low: #EFF5F0;
+    --color-surface-container: #E9EFEB;
+    --color-surface-container-high: #E4EAE5;
+    --color-surface-container-highest: #DEE4DF;
+    --color-on-surface: #171D1A;
+
     --color-pri: rgba(var(--color-pri-rgb), 1);
     --color-pri-o-90: rgba(var(--color-pri-rgb), 0.9);
     --color-pri-o-80: rgba(var(--color-pri-rgb), 0.8);
@@ -37,6 +54,9 @@
     --color-sec-o-20: rgba(var(--color-sec-rgb), 0.2);
     --color-sec-o-10: rgba(var(--color-sec-rgb), 0.1);
 
+    /* box-shadow: var(--shadow-md); /* 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) */
+    --shadow-top-md:  0 -4px 6px -1px rgb(0 0 0 / 0.1);
+
 }
 
 @layer base {
@@ -47,7 +67,14 @@
     @font-face {
         font-family: 'Noto Sans';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
+        font-display: swap;
+        src: url("../font/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf");
+    }
+    @font-face {
+        font-family: 'Noto Sans';
+        font-style: bold;
+        font-weight: 800;
         font-display: swap;
         src: url("../font/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf");
     }
@@ -100,18 +127,18 @@
     h4,
     h5,
     h6 {
-        @apply font-pri;
+        @apply font-pri text-on-surface;
     }
 
     p {
-        @apply font-sec;
+        @apply font-sec text-on-surface;
     }
 }
 
 
 @layer components {
     .button-pri {
-        @apply inline-flex border-0 py-2 px-6 focus:outline-none text-lg text-white font-pri bg-pri hover:bg-pri-o-90 transition duration-100 ease-linear cursor-pointer;
+        @apply inline-flex border-0 py-2 px-6 focus:outline-none text-lg text-white font-pri bg-primary hover:bg-pri-o-90 transition duration-100 ease-linear cursor-pointer;
     }
 
     .button-sec {
@@ -119,7 +146,7 @@
     }
 
     .link {
-        @apply hover:text-sec transition-colors ease-linear duration-75
+        @apply hover:text-on-primary-container transition-colors ease-linear duration-75;
     }
 
     .popupContainer {
@@ -137,16 +164,27 @@
     .imgWithPopup {
         @apply w-full h-full max-w-80 max-h-80 object-cover object-center cursor-pointer;
     }
+
     .headerNavDesktop {
-        @apply  hidden items-center right-0 overflow-hidden text-base gap-2 
+        @apply  hidden items-center right-0 overflow-hidden gap-2 
                 lg:flex lg:flex-row lg:ml-auto lg:relative lg:top-0  lg:shadow-none 
                 lg:border-none lg:bg-transparent lg:py-0 lg:w-min
     }
+    .headerNavLinkDesktop {
+        @apply hover:bg-surface-bright transition-colors ease-linear duration-75 break-keep px-8 py-4 w-max rounded-full whitespace-nowrap;
+    }
     .headerNavMobile {
-        @apply  absolute overflow-hidden right-0 flex flex-col shadow-lg border-t border-b border-pri top-26 bg-gray-100 
+        @apply  absolute overflow-hidden right-0 flex flex-col shadow-top-md border-t border-b border-pri top-20 bg-surface-container-highest
                 flex-wrap items-center text-base justify-center py-4
                 lg:hidden
                 ease-in-out duration-300 w-0
+    }
+    .headerNavMobileLink {
+        @apply flex items-center justify-center w-full px-4 py-16 hover:bg-pri-o-20 hover:text-primary font-pri text-2xl font-bold;
+    }
+
+    .footerNav {
+        @apply container px-4 py-16 mx-auto flex items-center xl:flex-row flex-col relative;
     }
 
     .indexImg {
