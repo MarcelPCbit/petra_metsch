@@ -135,7 +135,7 @@ function sendMail() {
     /** reset error text */
     document.getElementById("errorInfo").classList.add("hidden");
 
-    var recipient = "info@stuckateur-metsch.de";
+    var recipient = "";
     var subject = "Anfrage Internetformular";
     var body = "";
     var error = 0;

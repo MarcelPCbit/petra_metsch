@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-    --color-pri-rgb: 21, 107, 84;
+    --color-pri-rgb: 0, 105, 110;
         /* HEX:  #156B54 */
     --color-sec-rgb: 120, 107, 87;
         /* HEX:  #786B57 */
@@ -14,23 +14,24 @@
 @theme {
     --font-pri: 'Noto Sans', Roboto, 'Helvetica', 'Arial', 'sans-serif';
     --font-sec: 'Raleway', 'Helvetica', 'Arial', 'sans-serif';
+    --font-noto-serif: 'Noto Serif', 'Helvetica', 'Arial', 'sans-serif';
 
     --color-key: #1CE8B8;
-    --color-primary: #156B54;
+    --color-primary: #00696E;
     
     --color-on-primary: #FFFFFF;
-    --color-primary-container: #A4F2D5;
-    --color-on-primary-container: #00513E;
+    --color-primary-container: #9CF0F6;
+    --color-on-primary-container: #004F53;
 
-    --color-surface-default: #F5FBF6;
-    --color-surface-bright: #F5FBF6;
-    --color-surface-dim: #D5DBD7;
+    --color-surface-default: #F4FAFB;
+    --color-surface-dim: #D5DBDB;
+    --color-surface-bright: #F4FAFB;
     --color-surface-container-lowest: #FFFFFF;
-    --color-surface-container-low: #EFF5F0;
-    --color-surface-container: #E9EFEB;
-    --color-surface-container-high: #E4EAE5;
-    --color-surface-container-highest: #DEE4DF;
-    --color-on-surface: #171D1A;
+    --color-surface-container-low: #E9EFEF;
+    --color-surface-container: #E9EFEF;
+    --color-surface-container-high: #E3E9E9;
+    --color-surface-container-highest: #DDE4E4;
+    --color-on-surface: #161D1D;
 
     --color-pri: rgba(var(--color-pri-rgb), 1);
     --color-pri-o-90: rgba(var(--color-pri-rgb), 0.9);
@@ -54,9 +55,7 @@
     --color-sec-o-20: rgba(var(--color-sec-rgb), 0.2);
     --color-sec-o-10: rgba(var(--color-sec-rgb), 0.1);
 
-    /* box-shadow: var(--shadow-md); /* 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) */
     --shadow-top-md:  0 -4px 6px -1px rgb(0 0 0 / 0.1);
-
 }
 
 @layer base {
@@ -87,10 +86,17 @@
         src: url("../font/Raleway/Raleway-VariableFont_wght.ttf");
     }
 
+    @font-face {
+        font-family: 'Noto Serif';
+        font-style: bold;
+        font-weight: 800;
+        font-display: swap;
+        src: url("../font/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf");
+    }
+
     /*
         Import Icons
     */
-
     @font-face {
         font-family: 'Material Symbols Outlined';
         font-style: normal;
@@ -138,7 +144,8 @@
 
 @layer components {
     .button-pri {
-        @apply inline-flex border-0 py-2 px-6 focus:outline-none text-lg text-white font-pri bg-primary hover:bg-pri-o-90 transition duration-100 ease-linear cursor-pointer;
+        @apply inline-flex border-0 py-4 px-8 focus:outline-none text-lg text-on-primary font-pri bg-primary 
+        hover:bg-pri-o-90 transition duration-100 ease-linear cursor-pointer rounded-full;
     }
 
     .button-sec {
@@ -180,7 +187,7 @@
                 ease-in-out duration-300 w-0
     }
     .headerNavMobileLink {
-        @apply flex items-center justify-center w-full px-4 py-16 hover:bg-pri-o-20 hover:text-primary font-pri text-2xl font-bold;
+        @apply flex items-center justify-center w-full px-4 py-16 hover:bg-pri-o-20 hover:text-primary font-pri text-2xl font-bold whitespace-nowrap;
     }
 
     .footerNav {
