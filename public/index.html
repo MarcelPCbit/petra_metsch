@@ -4,21 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Petra Metsch - Trauerbegleiterin für Erwachsene und Kinder. Begleitung auf dem individuellen Trauerweg nach dem Verlust eines geliebten Menschen.">
     <link rel="stylesheet" type="text/css" href="css/tailwind.css">
     <title>Petra Metsch - Treuerberaterin</title>
-
 </head>
 
 <body class="overflow-x-hidden min-h-screen grid grid-rows-body bg-surface-default">
     <header class="text-gray-600 body-font bg-surface-container z-50">
         <div class="container mx-auto flex p-5 md:flex-row lg:flex-row items-center justify-center">
-            <a href="./index.html" class="flex title-font items-center">
-                <p class="ml-6 text-xl color-on-surface font-pri flex flex-col xl:flex-row gap-2">
-                    <span class="text-l sm:text-xl font-bold whitespace-nowrap" style="font-weight: 800;">Petra Metsch</span> 
-                    <span class="hidden lg:block whitespace-nowrap">Trauerbegleiterin für Erwachsene und Kinder</span></p>
-            </a>
-            <button id="headerNavMenuButton" onclick="toggleNav()" 
-                class=" 
+            <div class="flex gap-2 justify-center">
+                <a href="./index.html" class="flex title-font items-center">
+                    <p class="ml-6 text-xl color-on-surface font-pri flex flex-col xl:flex-row gap-2">
+                        <span class="text-l sm:text-xl font-bold whitespace-nowrap mt-1 sm:mt-0" style="font-weight: 800;">Petra
+                            Metsch</span>
+                        <span class="hidden lg:block whitespace-nowrap">Trauerbegleiterin für Erwachsene und Kinder</span>
+                    </p>
+                </a>
+                <img src="./img/stern.svg" alt="Stern" class="h-full max-h-8 block sm:hidden">
+            </div>
+
+            <button id="headerNavMenuButton" onclick="toggleNav()" class=" 
                     ml-auto flex flex-wrap items-center justify-center w-10 h-10
                     hover:bg-pri-o-10
                     lg:hidden transition-bg ease-linear duration-100 rounded-full cursor-pointer
@@ -26,11 +31,11 @@
                 <span id="headerMobileNavButtonIcon" class="material-symbols-outlined">menu</span>
             </button>
             <nav id="headerNavDesktop" class="headerNavDesktop">
-                <a href="#ich" class="headerNavLinkDesktop">
-                    <p class="font-pri">Über Mich</p>
-                </a>
-                <a href="#angebot" class="headerNavLinkDesktop mr-4 xl:mr-8">
+                <a href="#angebot" class="headerNavLinkDesktop">
                     <p class="font-pri">Mein Angebot</p>
+                </a>
+                <a href="#books" class="headerNavLinkDesktop mr-4 xl:mr-8">
+                    <p class="font-pri">Bücher</p>
                 </a>
                 <a href="#contact"
                     class="w-full lg:w-auto h-full hover:bg-pri-o-20 lg:hover:bg-transparent hidden lg:block">
@@ -38,12 +43,12 @@
                 </a>
             </nav>
             <nav id="headerNavMobile" class="headerNavMobile" style="height: calc(100vh - 81px);">
-                <a href="#ich" class=" headerNavMobileLink link" onclick="hideHaederNav()">
-                    <p>Über Mich</p>
-                </a>
-                <div class="mx-8 w-[80%] border-b border-primary"></div>
                 <a href="#angebot" class=" headerNavMobileLink link" onclick="hideHaederNav()">
                     <p>Mein Angebot</p>
+                </a>
+                <div class="mx-8 w-[80%] border-b border-primary"></div>
+                <a href="#books" class=" headerNavMobileLink link" onclick="hideHaederNav()">
+                    <p>Bücher</p>
                 </a>
                 <div class="mx-8 w-[80%] border-b border-primary"></div>
                 <a href="#contact" class=" headerNavMobileLink link" onclick="hideHaederNav()">
@@ -56,14 +61,23 @@
         <section class="text-gray-600 body-font">
             <!-- <img src="./img/wolken_xs.png" alt="Wolken Bild" class="h-64 absolute z-0 object-cover sm:hidden"> -->
             <img src="./img/wolken_sm.png" alt="Wolken Bild" class="h-64 absolute z-0 object-cover block md:hidden">
-            <img src="./img/wolken_md.png" alt="Wolken Bild" class="h-80 absolute z-0 object-cover hidden md:block 2xl:hidden">
-            <img src="./img/wolken_lg.png" alt="Wolken Bild" class="h-80 absolute z-0 object-cover hidden 2xl:block 2xl:w-full">
+            <img src="./img/wolken_md.png" alt="Wolken Bild"
+                class="h-80 absolute z-0 object-cover hidden md:block 2xl:hidden">
+            <img src="./img/wolken_lg.png" alt="Wolken Bild"
+                class="h-80 absolute z-0 object-cover hidden 2xl:block 2xl:w-full">
             <div class="container mx-auto flex px-5 min-h-64 md:min-h-80 flex-col items-center justify-center">
                 <div class="z-10">
-                    <h1 class="font-noto-serif text-xl lg:text-2xl text-center text-on-primary-container max-w-7xl mb-2">Da wo ich bin - bist auch du.</h1>
-                    <h1 class="font-noto-serif text-xl lg:text-2xl text-center text-on-primary-container max-w-7xl mb-2">Da wo du bist - werde ich sein.</h1>
-                    <h1 class="font-noto-serif text-xl lg:text-2xl text-center text-on-primary-container max-w-7xl mb-2">Eines Tages <br class="sm:hidden"> werden wir wieder sein.</h1>
-                    <h1 class="font-noto-serif text-xl lg:text-2xl text-center text-on-primary-container max-w-7xl">Für immer vereint - <br class="sm:hidden"> in unserer unendlichen Liebe.</h1>
+                    <h1
+                        class="font-noto-serif text-xl lg:text-2xl text-center text-on-primary-container max-w-7xl mb-2">
+                        Da wo ich bin - bist auch du.</h1>
+                    <h1
+                        class="font-noto-serif text-xl lg:text-2xl text-center text-on-primary-container max-w-7xl mb-2">
+                        Da wo du bist - werde ich sein.</h1>
+                    <h1
+                        class="font-noto-serif text-xl lg:text-2xl text-center text-on-primary-container max-w-7xl mb-2">
+                        Eines Tages <br class="sm:hidden"> werden wir wieder sein.</h1>
+                    <h1 class="font-noto-serif text-xl lg:text-2xl text-center text-on-primary-container max-w-7xl">Für
+                        immer vereint - <br class="sm:hidden"> in unserer unendlichen Liebe.</h1>
                     <h1 class="font-pri text-lg text-right text-on-primary-container max-w-7xl">Petra Metsch</h1>
                 </div>
             </div>
@@ -73,76 +87,155 @@
                 <div class="mb-20">
                     <!-- <h1 class="sm:text-3xl text-2xl font-medium title-font mb-16 text-center text-primary">Über Mich</h1> -->
                     <div class="mx-auto xl:max-w-3/4">
-                        <div id="ich" class="flex flex-col sm:flex-row-reverse gap-8 lg:gap-16 xl:gap-24 items-center justify-center mb-20">
+                        <div id="ich"
+                            class="flex flex-col md:flex-row-reverse gap-8 lg:gap-16 xl:gap-24 items-center justify-center mb-20">
                             <img src="./img/petra_sit_md.png" alt="Petra Sitzt" class="w-full h-auto max-w-80">
                             <div class="flex flex-col items-start">
-                                <h6 class="mb-4 text-xl text-on-primary-container">Wenn der Boden unter den Füßen fehlt: Begleitung aus tiefster Erfahrung.</h6>
+                                <h6 class="mb-4 text-xl text-on-primary-container">Wenn der Boden unter den Füßen fehlt -
+                                    Begleitung aus tiefster Erfahrung</h6>
                                 <p class="text-base leading-relaxed w-full max-w-[80ch]">
-                                    Mein Name ist Petra Metsch. Als Mutter von zwei Kindern kenne ich nicht nur das 
-                                    überwältigende Glück und die Dankbarkeit für das Geschenk des Lebens, sondern auch den unvorstellbaren, 
-                                    tiefsten Schmerz, der mich tief geprägt hat und heute die Basis für meine Arbeit bildet.
+                                    Mein Name ist Petra Metsch. Als Mutter von zwei Kindern kenne ich nicht nur das
+                                    überwältigende Glück und die Dankbarkeit für das Geschenk des Lebens, sondern auch
+                                    den unvorstellbaren,
+                                    tiefsten Schmerz, der mich stark geprägt hat und heute die Basis für meine Arbeit
+                                    bildet.
                                 </p>
                             </div>
                         </div>
-                        <div class="flex flex-col sm:flex-row gap-8 lg:gap-16 xl:gap-24 items-center justify-center mb-20">
+                        <div
+                            class="flex flex-col md:flex-row gap-8 lg:gap-16 xl:gap-24 items-center justify-center mb-20">
                             <img src="./img/petra_stand_md.png" alt="Petra Steht" class="max-h-96">
                             <div class="flex flex-col">
                                 <h6 class="mb-4 text-xl text-on-primary-container">Mein persönlicher Weg</h6>
                                 <p class="text-base leading-relaxed w-full max-w-[80ch]">
-                                    Meine jüngere Tochter Sarah wurde mir im Alter von nur 20 Jahren genommen, 
-                                    als sie bei einem unverschuldeten Autounfall tödlich verunglückte. Ich weiß aus eigener Erfahrung,
-                                     was es bedeutet, diesen Schicksalsschlag zu überleben. <br> 
-                                     Aus dieser persönlichen Betroffenheit heraus habe ich mich entschlossen, 
-                                     Menschen auf ihrem Trauerweg zu begleiten. 
-                                     Dazu absolvierte ich im Jahr 2022 meine Fachausbildung zur Trauerbegleiterin an der 
-                                     Paracelsus-Schule in Augsburg und ergänzte dieses Wissen im Jahr 2025 mit der 
-                                     Fortbildung zur Kinder- und Jugendtrauer bei Trauerland in Bremen.
+                                    Meine jüngere Tochter Sarah wurde mir im Alter von nur 20 Jahren genommen,
+                                    als sie bei einem unverschuldeten Autounfall tödlich verunglückte. Ich weiß aus
+                                    eigener Erfahrung,
+                                    was es bedeutet, diesen Schicksalsschlag zu erleben. <br>
+                                    Aus dieser persönlichen Betroffenheit heraus habe ich mich entschlossen,
+                                    Menschen auf ihrem Trauerweg zu begleiten.
+                                    Dazu absolvierte ich im Jahr 2022 meine Fachausbildung zur Trauerbegleiterin an der
+                                    Paracelsus-Schule in Augsburg und ergänzte dieses Wissen im Jahr 2025 mit der
+                                    Fortbildung zur Kinder- und Jugendtrauer bei Trauerland in Bremen.
                                 </p>
                             </div>
                         </div>
-                        <div id="angebot" class="flex flex-col sm:flex-row-reverse gap-8 lg:gap-16 xl:gap-24 items-center justify-center">
+                        <div id="angebot"
+                            class="flex flex-col md:flex-row-reverse gap-8 lg:gap-16 xl:gap-24 items-center justify-center">
                             <img src="./img/raum_md.png" alt="Petra Sitzt" class="w-full h-auto max-w-80">
                             <div class="flex flex-col items-start">
                                 <h6 class="mb-4 text-xl text-on-primary-container">Mein Angebot an Sie</h6>
                                 <p class="text-base leading-relaxed w-full max-w-[80ch]">
-                                    Ich biete Ihnen einen geschützten Raum und begleite Sie auf Augenhöhe, 
-                                    nicht nur mit meiner professionellen Expertise, sondern auch mit dem ehrlichen Verständnis einer Schicksalsgenossin. 
+                                    Ich biete Ihnen einen geschützten Raum und begleite Sie auf Augenhöhe,
+                                    nicht nur mit meiner professionellen Expertise, sondern auch mit dem ehrlichen
+                                    Verständnis einer Schicksalsgenossin.
                                     Lassen Sie mich Sie ein Stück auf Ihrem ganz individuellen Trauerweg begleiten.
                                 </p>
                                 <h6 class="mt-6 mb-2">Mein Angebot umfasst</h6>
-                                    <ul class="space-y-1 list-disc list-inside mb-2 leading-relaxed font-sec text-on-surface">
-                                        <li>
-                                            Einzelgespräche für Erwachsene
-                                        </li>
-                                        <li>
-                                            Einzelgespräche speziell für Kinder ab sechs Jahren und Jugendliche
-                                        </li>
-                                        <li>
-                                            Darüber hinaus biete ich zur Unterstützung auch einen Trauerspaziergang an. 
-                                        </li>
-                                    </ul>
-                                <p class="text-base leading-relaxed w-full max-w-[80ch]">Für meine Begleitung beträgt Mein Honorar 75€ pro 60 Minuten.</p>
+                                <ul
+                                    class="space-y-1 list-disc list-inside mb-2 leading-relaxed font-sec text-on-surface">
+                                    <li>
+                                        Einzelgespräche für Erwachsene
+                                    </li>
+                                    <li>
+                                        Einzelgespräche speziell für Kinder ab sechs Jahren und Jugendliche
+                                    </li>
+                                    <li>
+                                        Darüber hinaus biete ich zur Unterstützung auch einen Trauerspaziergang an.
+                                    </li>
+                                </ul>
+                                <p class="text-base leading-relaxed w-full max-w-[80ch]">Für meine Begleitung beträgt
+                                    Mein Honorar 75€ pro 60 Minuten.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="text-gray-600 body-font">
+        <section id="books" class="text-gray-600 body-font">
             <div class="container px-5 py-20 mx-auto flex flex-col sm:flex-nowrap flex-wrap items-center">
-                <h1 id="contact" class="sm:text-4xl text-3xl font-medium title-font mb-16 text-gray-900 text-center">Kontakt</h1>
+                <div class="mb-16">
+                    <h1 class="sm:text-4xl text-3xl font-medium title-font mb-8 text-gray-900 text-center">
+                        Bücher bei denen ich mitgewirkt habe</h1>
+                    <p class="text-center">
+                        Der gesamte Erlös aus den Buchverkäufen wird gemeinnützig gespendet. <br> 
+                        Informationen hierzu siehe
+                        <a href="https://whispervonsoul.blogspot.de"
+                            class="link underline">https://whispervonsoul.blogspot.de</a>
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center">
+                    <div class="p-4 lg:w-1/3">
+                        <div class="bookTile">
+                            <img class="aspect-book w-full"
+                                src="./img/ubersleden.jpg" alt="Buch Cover">
+                            <div class="p-6">
+                                <h1 class="title-font text-lg font-medium text-on-surface mb-3">ÜBERsLEBEN: Nach dem Tod eines Kindes</h1>
+                                <p class="leading-relaxed mb-3">
+                                    Mein Kind ist tot! Was macht jetzt noch Sinn? Hört dieser unaushaltbare Schmerz jemals wieder auf? 
+                                    Wie kann ich weiterleben? Das fragen Eltern oft, die gerade ihr Kind verloren haben. 
+                                    In diesem Buch erzählen Mütter, die schon vor vielen Jahren ein Kind durch Krankheit, 
+                                    Unfall oder Suizid hergeben mussten von ihrem Balanceakt auf dem Drahtseil des Überlebens nach dem Tod des eigenen Kindes.    
+                                </p>
+                                <div class="flex items-center flex-wrap ">
+                                    <a href="https://www.amazon.de/%C3%9CBERsLEBEN-Nach-dem-eines-Kindes/dp/3751956611" target="_blank" class="link cursor-pointer inline-flex items-center md:mb-2 lg:mb-0">Weitere Infos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:w-1/3">
+                        <div class="bookTile">
+                            <img class="aspect-book w-full"
+                                src="./img/voll_doof.jpg" alt="Buch Cover">
+                            <div class="p-6">
+                                <h1 class="title-font text-lg font-medium text-on-surface mb-3">Voll doof tot zu sein, wenn alle traurig sind</h1>
+                                <p class="leading-relaxed mb-3">
+                                    Niemand mag es sich vorstellen und doch passiert es jeden Tag: 
+                                    Ein Kind stirbt aufgrund einer Krankheit, durch einen Unfall oder es hat sich entschieden, 
+                                    freiwillig aus dieser Welt zu gehen. Wie geht man mit solch einem Verlust um? Wie geht das Leben danach weiter?
+                                    Worin findet man Trost? Dieses Buch erzählt die Geschichten verschiedener Menschen, die sich mit diesen Fragen auseinandersetzen müssen.
+                                </p>
+                                <div class="flex items-center flex-wrap ">
+                                    <a href="https://www.amazon.de/Voll-doof-sein-wenn-traurig/dp/3732290115" target="_blank" class="link cursor-pointer inline-flex items-center md:mb-2 lg:mb-0">Weitere Infos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:w-1/3">
+                        <div class="bookTile">
+                            <img class="aspect-book w-full"
+                                src="./img/tintenschmerz.jpg" alt="Buch Cover">
+                            <div class="p-6">
+                                <h1 class="title-font text-lg font-medium text-on-surface mb-3">Tintenschmerz: Tattoos erzählen von unseren verstorbenen Kindern</h1>
+                                <p class="leading-relaxed mb-3">
+                                    "Ein Tattoo? Ich? Niemals!" ... manchmal kommt es im Leben anders, als man denkt. 
+                                    So wie die 23 Autoren dieses Buches sich wohl niemals vorstellen konnten, ihr Kind zu verlieren, 
+                                    so verändert ein solcher Schicksalsschlag das ganze Leben ... Dinge, die man sich nie vorstellen konnte, 
+                                    werden Realität. Die Sicht auf das Leben verändert sich. Prioritäten ändern sich. Und plötzlich hat man ein Tattoo.
+                                </p>
+                                <div class="flex items-center flex-wrap ">
+                                    <a href="https://www.amazon.de/Tintenschmerz-Tattoos-erz%C3%A4hlen-unseren-verstorbenen/dp/3734748143" target="_blank" class="link cursor-pointer inline-flex items-center md:mb-2 lg:mb-0">Weitere Infos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="text-gray-600 body-font">
+            <div class="container px-5 py-20 mx-auto flex flex-col sm:flex-nowrap flex-wrap items-center">
+                <h1 class="sm:text-4xl text-3xl font-medium title-font mb-16 text-gray-900 text-center">
+                    Kontakt</h1>
                 <div class="flex flex-col lg:flex-row-reverse w-full xl:w-10/12">
                     <div class="lg:w-1/3 relative">
                         <div class="mb-8 lg:mb-0 sticky top-6 text-center lg:text-right">
-                            <h2 class="text-gray-900 text-xl lg:text-2xl mb-4 font-medium title-font">Hier erreichen sie uns</h2>
+                            <h2 class="text-gray-900 text-xl lg:text-2xl mb-4 font-medium title-font">Hier erreichen sie
+                                uns</h2>
                             <p class="text-md">Maulbronner Str. 47, 74363 Güglingen</p>
-                            <p class="text-md">
-                                Telefon: <a class="underline hover:text-pri" href="tel:+49713514294">(07135) 142 94</a>
-                            </p>
-                            <p class="text-md">Mobil: <a class="underline hover:text-pri" href="tel:+491632514592">0163 - 251 45 92</a></p>
-                            <p>Telefax: (07135) 934 55 76</p>
-                            <p class="text-md">E-Mail: 
-                                <a class="underline hover:text-pri" href="mailto:info@stuckateur-metsch.de">info@stuckateur-metsch.de</a>
+                            <p class="text-md">Mobil: <a class="underline hover:text-pri" href="tel:+491632516436">0163
+                                    2516436</a></p>
+                            <p class="text-md">E-Mail:
+                                <a class="underline hover:text-pri" href="mailto:info@trauer-begleiterin.com">info@trauer-begleiterin.com</a>
                             </p>
                         </div>
                     </div>
@@ -150,46 +243,45 @@
                         <div class="mx-auto">
                             <div class="flex flex-wrap -m-2">
                                 <div class="p-2 w-full sm:w-1/2">
-                                    <div class="ml-4">
+                                    <label for="name" class="ml-4 font-pri">
                                         Name <span class="text-red-500">*</span>
-                                    </div>
+                                    </label>
                                     <input id="name"
                                         class="w-full bg-surface-container-high border-primary border focus:outline-none focus:bg-surface-container-highest text-base px-4 py-2 rounded-full"
                                         placeholder="" type="text" required>
                                 </div>
                                 <div class="p-2 w-full sm:w-1/2">
-                                    <div class="ml-4">
+                                    <label for="email" class="ml-4 font-pri">
                                         Email <span class="text-red-500">*</span>
-                                    </div>
+                                    </label>
                                     <input id="email"
                                         class="w-full bg-surface-container-high border-primary border focus:outline-none focus:bg-surface-container-highest text-base px-4 py-2 rounded-full"
                                         placeholder="" type="email" required>
                                 </div>
                                 <div class="p-2 w-full sm:w-1/2">
-                                    <div class="ml-4">Ort</div>
-                                    <input id="city"
-                                        class="w-full bg-surface-container-high border-primary border focus:outline-none focus:bg-surface-container-highest text-base px-4 py-2 rounded-full
+                                    <label for="city" class="ml-4 font-pri">Ort</label>
+                                    <input id="city" class="w-full bg-surface-container-high border-primary border focus:outline-none focus:bg-surface-container-highest text-base px-4 py-2 rounded-full
                                         placeholder=" type="text">
                                 </div>
                                 <div class="p-2 w-full sm:w-1/2">
-                                    <div class="ml-4">
+                                    <label for="phone" class="ml-4 font-pri">
                                         Telefon <span class="text-red-500">*</span>
-                                    </div>
-                                    <input id="phone"
-                                        class="w-full bg-surface-container-high border-primary border focus:outline-none focus:bg-surface-container-highest text-base px-4 py-2 rounded-full
+                                    </label>
+                                    <input id="phone" class="w-full bg-surface-container-high border-primary border focus:outline-none focus:bg-surface-container-highest text-base px-4 py-2 rounded-full
                                         placeholder=" type="number" required>
                                 </div>
                                 <div class="p-2 w-full">
-                                    <div class="ml-4">
+                                    <label for="message" class="ml-4 font-pri">
                                         Nachricht <span class="text-red-500">*</span>
-                                    </div>
+                                    </label>
                                     <textarea id="message"
                                         class="w-full bg-surface-container-high border-primary border focus:outline-none h-48 focus:bg-surface-container-highest text-base px-4 py-2 resize-none block rounded-2xl"
                                         placeholder="" required></textarea>
                                 </div>
                                 <div class="p-2 pt-8 w-full">
                                     <p>
-                                        <span class="text-red-500">*</span> Mit dem Absenden der Anfrage erkläre ich mich
+                                        <span class="text-red-500">*</span> Mit dem Absenden der Anfrage erkläre ich
+                                        mich
                                         einverstanden,
                                         dass meine in das Kontaktformular eingegebenen Daten elektronisch
                                         gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden.
@@ -202,34 +294,38 @@
                                     <p class="text-color-sec text-lg"></p>
                                 </div>
                                 <div class="p-2 pt-8 w-full text-center">
-                                    <button onclick="sendMail()"class="button-pri" type="button">Senden</button>
+                                    <button onclick="sendMail()" class="button-pri" type="button">Senden</button>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
-            </div>            
+            </div>
         </section>
     </main>
     <footer class="text-gray-600 body-font bg-surface-container">
         <div class="footerNav">
-            <a href="./index.html" class="flex flex-col title-font font-medium mb-4 items-center md:flex-row md:mb-0 md:justify-start justify-center">
-                <p class="text-xl color-on-surface font-pri flex flex-col md:flex-row items-center gap-2 whitespace-nowrap mb-8">
-                    <span class="text-l sm:text-xl font-bold" style="font-weight: 800;">Petra Metsch</span> 
-                    <span class="hidden sm:block">Trauerbegleiterin für Erwachsene und Kinder</span></p>
+            <a href="./index.html"
+                class="flex flex-col title-font font-medium mb-4 items-center md:flex-row md:mb-0 md:justify-start justify-center">
+                <p
+                    class="text-xl color-on-surface font-pri flex flex-col md:flex-row items-center gap-2 whitespace-nowrap mb-8">
+                    <span class="text-l sm:text-xl font-bold" style="font-weight: 800;">Petra Metsch</span>
+                    <span class="hidden sm:block">Trauerbegleiterin für Erwachsene und Kinder</span>
+                </p>
             </a>
             <div class="flex flex-col w-full justify-center xl:justify-end gap-12 md:gap-16
                 xl:gap-24 sm:flex-row">
                 <div class="flex flex-col gap-1 items-center xl:items-start">
                     <h6 class="mb-1">Kontakt</h6>
-                    <a href="mailto:thomas.petra@web.de" class="link">thomas.petra@web.de</a>
-                    <a href="tel:+" class="link">08928376132</a>
-                    <a href="">Instagram</a>
+                    <a href="mailto:info@trauer-begleiterin.com" class="link">info@trauer-begleiterin.com</a>
+                    <a href="tel:+491632516436" class="link">0163 2516436</a>
+                    <a href="https://www.instagram.com/saripeme/" class="link" target="_blank">Instagram</a>
+                    <a href="https://www.facebook.com/petra.metsch" class="link" target="_blank">Facebook</a>
                 </div>
                 <div class="flex flex-col gap-1 items-center xl:items-start">
                     <h6 class="mb-1">Rechtliches</h6>
-                    <a href="" class="link">Impressum</a>
-                    <a href="" class="link">Datenschutz</a>
+                    <a href="./sites/impressum.html" class="link">Impressum</a>
+                    <a href="./sites/datenschutz.html" class="link">Datenschutz</a>
                 </div>
             </div>
         </div>

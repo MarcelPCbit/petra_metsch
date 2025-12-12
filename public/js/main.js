@@ -135,7 +135,7 @@ function sendMail() {
     /** reset error text */
     document.getElementById("errorInfo").classList.add("hidden");
 
-    var recipient = "";
+    var recipient = "info@trauer-begleiterin.com";
     var subject = "Anfrage Internetformular";
     var body = "";
     var error = 0;

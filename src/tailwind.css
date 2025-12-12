@@ -56,6 +56,8 @@
     --color-sec-o-10: rgba(var(--color-sec-rgb), 0.1);
 
     --shadow-top-md:  0 -4px 6px -1px rgb(0 0 0 / 0.1);
+
+    --aspect-book: 300 / 425;
 }
 
 @layer base {
@@ -196,5 +198,9 @@
 
     .indexImg {
         @apply h-64 md:h-96 max-w-3xs md:max-w-svh;
+    }
+
+    .bookTile {
+        @apply h-full border border-primary bg-surface-container rounded-xl overflow-hidden max-w-96
     }
 }
